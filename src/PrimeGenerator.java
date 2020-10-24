@@ -2,6 +2,15 @@ import java.util.ArrayList;
 
 public class PrimeGenerator {
 
+    public ArrayList<Integer> generatePrimes(int limit) {
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+        for (int i = 1; i <= limit; i++) {
+            if (isPrime(i))
+                primes.add(i);
+        }
+        return primes;
+    }
+
     private boolean isPrime(int number) {
         if (number <= 1)
             return false;
